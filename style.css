@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #e8d8b7; /* Light tan background */
-    color: #ccd6f6; /* Light blue text */
+    color: #5a8bb1; /* Darker pastel blue for main text */
     margin: 0;
     padding: 0;
     cursor: none; /* Hide default cursor */
@@ -32,7 +32,7 @@ h1 {
     color: #a2c9f3; /* Pastel blue accent */
 }
 
-/* Sections */
+/* Subheadings (Education, Experience, Projects, etc.) */
 h2 {
     color: #86c39e; /* Pastel green */
     border-bottom: 2px solid #86c39e;
@@ -65,14 +65,14 @@ h2 {
     justify-content: space-between;
     font-size: 1.1em;
     font-weight: bold;
-    color: #86c39e; /* Pastel green */
+    color: #5a8bb1; /* Darker pastel blue */
     margin: 0;
 }
 
 .resume-item p {
     margin: 5px 0 0;
     font-size: 0.9em;
-    color: #8a7e62; /* Darker tan text */
+    color: #5a8bb1; /* Darker pastel blue */
 }
 
 /* Education */
@@ -81,12 +81,12 @@ h2 {
     justify-content: space-between;
     font-size: 1.1em;
     font-weight: bold;
-    color: #ccd6f6;
+    color: #5a8bb1; /* Darker pastel blue */
 }
 
 .education-details {
     font-size: 0.9em;
-    color: #8a7e62; /* Darker tan text */
+    color: #5a8bb1; /* Darker pastel blue */
 }
 
 /* Buttons */
@@ -94,17 +94,17 @@ h2 {
     display: inline-block;
     padding: 10px 15px;
     margin-top: 10px;
-    color: #86c39e; /* Pastel green text */
-    border: 1px solid #86c39e; /* Pastel green border */
+    color: #5a8bb1; /* Darker pastel blue */
+    border: 1px solid #5a8bb1; /* Darker pastel blue */
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-    background: #86c39e; /* Pastel green background */
+    background: #5a8bb1; /* Darker pastel blue background */
     color: #0a192f;
-    box-shadow: 0 4px 8px rgba(134, 195, 158, 0.4); /* Glow effect */
+    box-shadow: 0 4px 8px rgba(90, 139, 177, 0.4); /* Glow effect */
 }
 
 /* Mobile Responsive */
