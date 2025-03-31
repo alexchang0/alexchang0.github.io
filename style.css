@@ -1,40 +1,39 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #E0E0E0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a192f; /* Dark blue background */
+    color: #ccd6f6; /* Light blue text */
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #FFFFFF;
-}
-
+/* Header */
 h1 {
-    font-size: 24px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #a855f7; /* Purple accent */
 }
 
+/* Sections */
 h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #444;
+    color: #a855f7; /* Purple accent */
+    border-bottom: 2px solid #a855f7;
     padding-bottom: 5px;
-}
-
-h3 {
-    font-size: 18px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .resume-category {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
+/* Resume Items */
 .resume-item {
     margin-bottom: 15px;
 }
@@ -42,45 +41,56 @@ h3 {
 .resume-item h4 {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 1.1em;
     font-weight: bold;
-    color: #90CAF9;
+    color: #ccd6f6;
+    margin: 0;
 }
 
 .resume-item p {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #B0BEC5;
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #8892b0;
 }
 
-#about p {
-    font-size: 14px;
-}
-
-#Art p {
-    font-size: 14px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #1976D2;
-    color: white;
-    padding: 8px 12px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
+/* Education */
 .education-title {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 1.1em;
     font-weight: bold;
-    color: #90CAF9;
+    color: #ccd6f6;
 }
 
 .education-details {
-    font-size: 14px;
-    margin-top: 5px;
-    color: #B0BEC5;
+    font-size: 0.9em;
+    color: #8892b0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: #a855f7;
+    border: 1px solid #a855f7;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #a855f7;
+    color: #0a192f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .resume-item h4 {
+        flex-direction: column;
+    }
+
+    .education-title {
+        flex-direction: column;
+    }
 }
