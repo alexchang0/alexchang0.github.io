@@ -79,28 +79,50 @@ section {
     border-radius: 10px;
 }
 
+/* Fix Resume Layout */
 .resume-item {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     margin: 10px 0;
     border-radius: 10px;
 }
 
+/* Title and Date Container */
+.resume-item .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Prevent overflow */
+    width: 100%;
+}
+
+/* Job Title */
 .resume-item h4 {
     margin: 0;
+    font-weight: 600;
     flex: 1;
+    text-align: left;
 }
 
-.resume-item p {
-    margin: 5px 0;
+/* Date */
+.resume-item .date {
+    font-weight: 300;
+    color: #bb86fc;
     text-align: right;
     flex-shrink: 0;
-    min-width: 200px;
+    min-width: 150px;
 }
 
+/* Paragraph Text */
+.resume-item p {
+    margin: 5px 0 0;
+    font-size: 0.95em;
+    color: #ddd;
+}
+
+/* Footer */
 footer {
     margin-top: 30px;
     font-size: 0.8em;
