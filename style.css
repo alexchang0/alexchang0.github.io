@@ -5,8 +5,10 @@ body {
     color: #ccd6f6; /* Light blue text */
     margin: 0;
     padding: 0;
+    cursor: none; /* Hide default cursor */
 }
 
+/* Container */
 .container {
     max-width: 800px;
     margin: 40px auto;
@@ -102,12 +104,16 @@ h2 {
         flex-direction: column;
     }
 
+    body {
+        cursor: auto; /* Enable default cursor on mobile */
+    }
 
-
-body {
-    cursor: none; /* Hide default cursor */
+    .sparkle {
+        display: none; /* Hide sparkles on mobile */
+    }
 }
 
+/* Sparkle effect */
 .sparkle {
     position: absolute;
     width: 6px;
@@ -120,12 +126,12 @@ body {
 }
 
 @keyframes fadeOut {
-    from { opacity: 1; transform: scale(1); }
-    to { opacity: 0; transform: scale(2); }
-}
-
-
-    .education-title {
-        flex-direction: column;
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
     }
 }
