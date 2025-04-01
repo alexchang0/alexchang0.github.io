@@ -5,7 +5,7 @@ body {
     color: #5a8bb1; /* Darker pastel blue for main text */
     margin: 0;
     padding: 0;
-    cursor: none; /* Hide default cursor */
+    cursor: url('totoroCursor.png'), auto; /* Hide default cursor */
 }
 
 #about {
