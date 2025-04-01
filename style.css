@@ -36,16 +36,19 @@ body {
     padding: 20px;
 }
 
-/* Header */
 h1 {
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
-    color: #a3c8f3; /* Light blue color for Alex Chang */
-    border: 3px solid #a855f7; /* Purple border */
+    color: #a3c8f3; /* Light blue color */
+    border: 3px solid #a3c8f3; /* Light blue border */
     padding: 10px;
-    display: inline-block; /* Ensures border wraps the text */
-    border-radius: 10px; /* Slightly rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto; /* Centers horizontally */
+    border-radius: 10px;
 }
 
 /* Subheadings (Education, Experience, Projects, etc.) */
@@ -162,26 +165,4 @@ h2 {
 }
 
 
-section {
-    border: 5px solid #9db17c; /* Pastel green vine color */
-    border-radius: 20px;
-    padding: 20px;
-    position: relative;
-}
-
-section::before {
-    content: "🌿🌱🍃";
-    font-size: 1.5rem;
-    position: absolute;
-    top: -15px;
-    left: 10px;
-}
-
-section::after {
-    content: "🍃🌱🌿";
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: -15px;
-    right: 10px;
-}
 
