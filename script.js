@@ -1,17 +1,15 @@
-document.addEventListener("mousemove", (event) => {
-    createSparkle(event.clientX, event.clientY);
-});
-
-function createSparkle(x, y) {
-    const sparkle = document.createElement("div");
-    sparkle.classList.add("sparkle");
-
-    sparkle.style.left = `${x}px`;
-    sparkle.style.top = `${y}px`;
-
+document.addEventListener('mousemove', function(e) {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
     document.body.appendChild(sparkle);
 
+    const x = e.pageX;
+    const y = e.pageY;
+
+    sparkle.style.left = `${x - 3}px`; // Offset to center the sparkle
+    sparkle.style.top = `${y - 3}px`; // Offset to center the sparkle
+
     setTimeout(() => {
-        sparkle.remove();
-    }, 1500); // Adjust fade duration if needed
-}
+        sparkle.remove(); // Remove the sparkle after animation
+    }, 500); // Match the fadeOut duration
+});
