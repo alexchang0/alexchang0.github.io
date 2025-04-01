@@ -15,17 +15,19 @@ body {
     justify-content: center; /* Center vertically */
     text-align: center; /* Ensure text is centered */
     margin-top: 20px; /* Add margin for spacing */
-    padding: 15px; /* Space inside the border */
-    
-    border: 3px solid #a855f7; /* Purple border */
-    border-radius: 10px; /* Smooth rounded corners */
-    background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
-    box-shadow: 0 4px 10px rgba(168, 85, 247, 0.2); /* Soft glow */
-    width: 80%; /* Adjust width */
-    max-width: 600px; /* Prevent it from getting too big */
-    margin-left: auto; /* Center it */
-    margin-right: auto; /* Center it */
+    padding: 20px;
+    border: 3px solid #a3c8f3; /* Light blue border */
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    width: 80%; /* To make sure it's not too wide */
+    box-shadow: 0 4px 10px rgba(163, 200, 243, 0.3); /* Subtle light blue shadow */
 }
+
+/* Ensure title is centered */
+#about h2 {
+    margin-bottom: 10px;
+}
+
 
 /* Container */
 .container {
