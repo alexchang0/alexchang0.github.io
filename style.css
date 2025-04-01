@@ -1,13 +1,40 @@
+/* Define default light theme variables */
+:root {
+    --primary-color: #5a8bb1;
+    --secondary-color: #d2b68a;
+    --accent-color: #86c39e;
+    --highlight-color: #a3c8f3;
+    --background-color: #e8d8b7;
+    --about-background-color: #f2e4b5;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --primary-color: #00caeb;
+    --secondary-color: #34495e;
+    --accent-color: #df3f8b;
+    --highlight-color: #2528a2;
+    --background-color: #000000;
+    --about-background-color: #34495e;
+
+}
+
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e8d8b7; /* Light tan background */
-    color: #5a8bb1; /* Darker pastel blue for main text */
+    background-color: var(--background-color); /* Background color based on theme */
+    color: #ecf0f1; /* Light gray text */
     margin: 0;
     padding: 0;
     cursor: url('totoroCursor.cur') 16 16, auto;
 }
 
+/* Update text color for all descriptions to light blue */
+p, .resume-item p, .education-details, .contact-links .btn {
+    color: #a3c8f3; /* Light blue text */
+}
+
+/* About Section */
 #about {
     display: flex;
     flex-direction: column;
@@ -16,17 +43,14 @@ body {
     margin: 20px auto; /* Centers horizontally */
     padding: 20px;
     border-radius: 15px;
-    background-color: #f2e4b5; /* Light tan background */
+    background-color: var(--about-background-color); /* Light or dark background */
     width: 60%; /* Adjust width to avoid being too wide */
-    box-shadow: 0 4px 10px rgba(163, 200, 243, 0.3);
 }
-
 
 /* Ensure title is centered */
 #about h2 {
     margin-bottom: 10px;
 }
-
 
 /* Container */
 .container {
@@ -39,8 +63,8 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
-    color: #a3c8f3; /* Light blue color */
-    border: 3px solid #a3c8f3; /* Light blue border */
+    color: var(--primary-color); /* Text color based on theme */
+    border: 3px solid var(--primary-color); /* Border based on theme */
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -48,23 +72,24 @@ h1 {
     width: fit-content;
     margin: 0 auto; /* Centers horizontally */
     border-radius: 10px;
+    /* Removed glow effect */
 }
 
 /* Subheadings (Education, Experience, Projects, etc.) */
 h2 {
-    color: #86c39e; /* Pastel green */
-    border-bottom: 2px solid #86c39e;
+    color: var(--accent-color); /* Accent color for subheadings */
+    border-bottom: 2px solid var(--accent-color); /* Border color based on theme */
     padding-bottom: 5px;
     margin-top: 30px;
+    /* Removed glow effect */
 }
 
 /* Resume Categories */
 .resume-category {
-    background: #d2b68a; /* Light tan background */
+    background: var(--secondary-color); /* Background based on theme */
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #a2c9f3; /* Pastel blue border */
-    box-shadow: 0 4px 10px rgba(162, 201, 243, 0.2); /* Soft pastel blue glow */
+    border: 1px solid var(-background-color); /* Border based on theme */
     margin-bottom: 30px;
 }
 
@@ -73,9 +98,8 @@ h2 {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #8a7e62; /* Darker tan border */
-    background: #f2e4b5; /* Lighter tan background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--highlight-color); /* Border based on theme */
+    background: var(--background-color); /* Background based on theme */
 }
 
 .resume-item h4 {
@@ -83,14 +107,15 @@ h2 {
     justify-content: space-between;
     font-size: 1.1em;
     font-weight: bold;
-    color: #5a8bb1; /* Darker pastel blue */
+    color: var(--primary-color); /* Highlight color for resume items */
     margin: 0;
+    /* Removed glow effect */
 }
 
 .resume-item p {
     margin: 5px 0 0;
     font-size: 0.9em;
-    color: #5a8bb1; /* Darker pastel blue */
+    color: var(--primary-color); /* Light blue text */
 }
 
 /* Education */
@@ -99,12 +124,12 @@ h2 {
     justify-content: space-between;
     font-size: 1.1em;
     font-weight: bold;
-    color: #5a8bb1; /* Darker pastel blue */
+    color: var(--primary-color); /* Primary color for education title */
 }
 
 .education-details {
     font-size: 0.9em;
-    color: #5a8bb1; /* Darker pastel blue */
+    color: var(--primary-color); /* Light blue text */
 }
 
 /* Buttons */
@@ -112,17 +137,18 @@ h2 {
     display: inline-block;
     padding: 10px 15px;
     margin-top: 10px;
-    color: #5a8bb1; /* Darker pastel blue */
-    border: 1px solid #5a8bb1; /* Darker pastel blue */
+    color: var(--primary-color); /* Primary color for button text */
+    border: 1px solid var(--primary-color); /* Primary color for button border */
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-    background: #5a8bb1; /* Darker pastel blue background */
-    color: #0a192f;
-    box-shadow: 0 4px 8px rgba(90, 139, 177, 0.4); /* Glow effect */
+    background: var(--primary-color); /* Button hover background color */
+    color: #ffffff; /* Button text color on hover */
+    /* Reduced glow effect on hover */
+    box-shadow: 0 2px 4px rgba(0, 202, 235, 0.3);
 }
 
 /* Mobile Responsive */
@@ -140,15 +166,15 @@ h2 {
     }
 }
 
-/* Sparkle effect (darker blue) */
+/* Sparkle effect (neon cyan) */
 .sparkle {
     position: absolute;
     width: 6px;
     height: 6px;
-    background: #569cd6; /* Darker blue */
+    background: var(--primary-color); /* Neon color based on theme */
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 0px 0px 8px #569cd6; /* Glow effect */
+    box-shadow: 0px 0px 2px var(--primary-color); /* Smaller glow */
     animation: fadeOut 1.5s ease-out forwards;
 }
 
@@ -163,6 +189,7 @@ h2 {
     }
 }
 
+/* Contact Links */
 .contact-links {
     margin-top: 15px;
     display: flex;
@@ -174,16 +201,39 @@ h2 {
     padding: 8px 12px;
     font-size: 0.9em;
     background: transparent;
-    border: 1px solid #5a8bb1; /* Darker pastel blue */
-    color: #5a8bb1;
+    border: 1px solid var(--primary-color); /* Border based on theme */
+    color: var(--primary-color);
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 .contact-links .btn:hover {
-    background: #5a8bb1;
+    background: var(--primary-color);
     color: #ffffff;
 }
 
+#toggleBtn {
+    position: fixed;
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Position towards the right */
+    padding: 8px 16px; /* Reduced padding */
+    background-color: var(--primary-color); /* Background color based on theme */
+    color: #ffffff; /* White text color */
+    font-size: 0.9em; /* Slightly smaller font size */
+    border: 2px solid var(--primary-color); /* Border color based on theme */
+    border-radius: 8px; /* Slightly smaller border radius */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
 
+#toggleBtn:hover {
+    background-color: var(--accent-color); /* Accent color on hover */
+    color: var(--primary-color); /* Change text color on hover */
+    box-shadow: 0 4px 10px rgba(0, 202, 235, 0.3); /* Neon glow effect */
+}
+
+#toggleBtn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px var(--accent-color); /* Accent color outline when focused */
+}
