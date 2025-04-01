@@ -18,7 +18,7 @@ body {
     padding: 20px;
     border: 3px solid #a3c8f3; /* Light blue border */
     border-radius: 15px; /* Rounded corners */
-    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    background-color: #f2e4b5; /* Light tan background */
     width: 80%; /* To make sure it's not too wide */
     box-shadow: 0 4px 10px rgba(163, 200, 243, 0.3); /* Subtle light blue shadow */
 }
