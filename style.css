@@ -15,6 +15,16 @@ body {
     justify-content: center; /* Center vertically */
     text-align: center; /* Ensure text is centered */
     margin-top: 20px; /* Add margin for spacing */
+    padding: 15px; /* Space inside the border */
+    
+    border: 3px solid #a855f7; /* Purple border */
+    border-radius: 10px; /* Smooth rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
+    box-shadow: 0 4px 10px rgba(168, 85, 247, 0.2); /* Soft glow */
+    width: 80%; /* Adjust width */
+    max-width: 600px; /* Prevent it from getting too big */
+    margin-left: auto; /* Center it */
+    margin-right: auto; /* Center it */
 }
 
 /* Container */
@@ -29,7 +39,11 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
-    color: #a2c9f3; /* Pastel blue accent */
+    color: #a855f7; /* Keep your pastel purple */
+    border: 3px solid #a855f7; /* Purple border */
+    padding: 10px;
+    display: inline-block; /* Ensures border wraps the text */
+    border-radius: 10px; /* Slightly rounded corners */
 }
 
 /* Subheadings (Education, Experience, Projects, etc.) */
