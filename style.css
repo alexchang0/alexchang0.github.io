@@ -158,3 +158,28 @@ h2 {
         transform: scale(2);
     }
 }
+
+
+section {
+    border: 5px solid #9db17c; /* Pastel green vine color */
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+section::before {
+    content: "🌿🌱🍃";
+    font-size: 1.5rem;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+
+section::after {
+    content: "🍃🌱🌿";
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+}
+
