@@ -1,4 +1,6 @@
-/* ========== BASE RESET ========== */
+/* ======================================================
+   BASE RESET
+====================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +13,23 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--background-color, #0f172a);
+  background-color: #0f172a;
   color: #ecf0f1;
+  line-height: 1.6;
 }
 
-/* ========== NAV ========== */
+/* ======================================================
+   NAV
+====================================================== */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(15, 23, 42, 0.95);
-  padding: 12px;
+  padding: 12px 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   z-index: 10;
 }
 
@@ -32,36 +37,54 @@ nav a {
   text-decoration: none;
   color: #ecf0f1;
   font-weight: 500;
+  padding-bottom: 2px;
 }
 
 nav a.active {
-  font-weight: bold;
+  font-weight: 700;
   border-bottom: 2px solid #ecf0f1;
 }
 
-/* ========== SECTIONS ========== */
+/* ======================================================
+   SECTION SYSTEM (DYNAMIC)
+====================================================== */
 .section {
-  min-height: 100vh;
-  padding: 100px 10%;
+  padding-inline: 10%;
+  padding-block: clamp(48px, 6vw, 80px);
 }
 
-.full {
+/* tighter content sections */
+.section--tight {
+  padding-block: clamp(32px, 4vw, 56px);
+}
+
+/* looser visual sections */
+.section--loose {
+  padding-block: clamp(72px, 8vw, 120px);
+}
+
+/* subtle separation without height */
+.section:not(.full) {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section + .section {
+  margin-top: 16px;
+}
+
+/* ======================================================
+   HERO / COVER
+====================================================== */
+.section.full {
+  min-height: 100vh;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  border-top: none;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* ========== COVER IMAGE ========== */
 .bg-img {
   position: absolute;
   inset: 0;
@@ -73,18 +96,46 @@ h2 {
 
 .overlay {
   background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
+  padding: clamp(32px, 6vw, 48px);
   text-align: center;
 }
 
-/* ========== EXPERIENCE TIMELINE ========== */
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: clamp(12px, 2vw, 20px);
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-bottom: 12px;
+  max-width: 75ch;
+}
+
+/* ======================================================
+   EXPERIENCE TIMELINE
+====================================================== */
 .timeline {
   border-left: 2px solid #475569;
-  padding-left: 30px;
+  padding-left: 28px;
+  margin-top: 24px;
 }
 
 .timeline-item {
-  margin-bottom: 40px;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+.timeline-item h3 {
+  margin-bottom: 4px;
 }
 
 .date {
@@ -92,17 +143,20 @@ h2 {
   color: #94a3b8;
 }
 
-/* ========== PROJECTS ========== */
+/* ======================================================
+   PROJECTS
+====================================================== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: 24px;
 }
 
 .project-card {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .project-card img {
@@ -111,47 +165,71 @@ h2 {
   object-fit: cover;
 }
 
+/* overlay with proper inner padding */
 .project-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: clamp(16px, 3vw, 28px);
+  text-align: center;
+
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.project-overlay h3 {
+  margin-bottom: 8px;
+}
+
+.project-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 30ch;
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
-/* ========== COURSEWORK ========== */
+/* ======================================================
+   COURSEWORK
+====================================================== */
 .course-list {
   list-style: none;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  margin-top: 16px;
 }
 
 .course-list li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* ========== HOBBIES ========== */
+/* ======================================================
+   HOBBIES
+====================================================== */
 .hobby-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: 24px;
 }
 
 .hobby-grid img {
   width: 100%;
-  height: 250px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-/* ========== SPARKLE CURSOR EFFECT ========== */
+/* ======================================================
+   SPARKLE CURSOR EFFECT
+====================================================== */
 .sparkle {
   position: fixed;
   width: 6px;
@@ -174,7 +252,9 @@ h2 {
   }
 }
 
-/* Accessibility: reduce motion */
+/* ======================================================
+   ACCESSIBILITY
+====================================================== */
 @media (prefers-reduced-motion: reduce) {
   .sparkle {
     animation: none;
