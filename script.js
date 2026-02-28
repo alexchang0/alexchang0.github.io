@@ -24,7 +24,7 @@ window.addEventListener("scroll", () => {
 /* ========== SPARKLE CURSOR EFFECT ========== */
 
 let lastSparkleTime = 0;
-const SPARKLE_DELAY = 20; // ms (throttle for performance)
+const SPARKLE_DELAY = 10; // ms (throttle for performance)
 
 document.addEventListener("mousemove", (e) => {
   const now = Date.now();

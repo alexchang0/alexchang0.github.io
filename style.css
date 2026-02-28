@@ -12,13 +12,15 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.05em;
   background-color: #0f172a;
   color: #ecf0f1;
   line-height: 1.6;
 
   /* Custom Totoro Cursor */
-  cursor: url('totoroCursor.cur'), auto;
+  cursor: url('totoroCursor.cur') 16 16, auto;
 }
 
 /* ======================================================
@@ -28,12 +30,13 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   padding: 12px 20px;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 80px;
   z-index: 10;
+  font-size: large;
 }
 
 nav a {
@@ -88,6 +91,24 @@ nav a.active {
   border-top: none;
 }
 
+.site-name {
+  display: inline-block;               /* shrink to text width */
+  font-size: clamp(7rem, 6vw, 9rem);
+  font-weight: 100;
+  letter-spacing: 0.08em;
+  
+  padding: 16px 30px;                  /* pill padding */
+  border-radius: 50px;                /* more than slightly round */
+  
+  background: rgba(40, 69, 96, 0.6);      /* highlight */
+  backdrop-filter: blur(6px);
+
+  text-align: center;
+
+  /* vertical positioning */
+  margin-top: 50vh;                     /* move down 20% of viewport */
+}
+
 .bg-img {
   position: absolute;
   inset: 0;
@@ -95,26 +116,21 @@ nav a.active {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.3;
   filter: brightness(0.85);
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: clamp(32px, 6vw, 48px);
-  text-align: center;
 }
 
 /* ======================================================
    TYPOGRAPHY
 ====================================================== */
 h1 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 300;
 }
 
 h2 {
   font-size: clamp(1.6rem, 3vw, 2rem);
   margin-bottom: clamp(12px, 2vw, 20px);
+  font-weight: 300;
 }
 
 h3 {
@@ -124,19 +140,83 @@ h3 {
 p {
   margin-bottom: 12px;
   max-width: 75ch;
+  font-weight: 200;
+}
+
+/* ======================================================
+  ABOUT ME
+====================================================== */
+#about {
+  background: rgba(11, 98, 94, 0.753);
+  border-radius: 12px;
+  padding: clamp(px, 4vw, 40px);
+  font-size: large;
+  text-align: center;
+}
+
+#about p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LinkedIn button */
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #0c0a20; /* LinkedIn blue */
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.linkedin-btn:hover {
+  background-color: #004182;
+  transform: translateY(-2px);
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* ======================================================
    EXPERIENCE TIMELINE
 ====================================================== */
+
+#experience {
+  background: rgba(21, 57, 101, 0.753);
+  border-radius: 12px;
+  padding: clamp(100px, 4vw, 100px);
+  position: relative;
+}
+
 .timeline {
-  border-left: 2px solid #475569;
-  padding-left: 28px;
+  position: relative;
   margin-top: 24px;
+  padding-left: 2px; /* space for logos */
+  border-left: 2px solid #475569;
 }
 
 .timeline-item {
+  position: relative;
   margin-bottom: clamp(20px, 3vw, 32px);
+  padding-left: 12px; /* space between line and text */
+}
+
+
+.timeline-item img.company-logo {
+  position: absolute;
+  left: -70px;       /* aligns with ::before */
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 6px; /* slight rounding */
+  z-index: 2;          /* above the line */
 }
 
 .timeline-item h3 {
@@ -145,12 +225,20 @@ p {
 
 .date {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: #b2bdcc;
+  font-weight: 300;
 }
 
 /* ======================================================
    PROJECTS
 ====================================================== */
+
+#projects {
+  background: rgba(44, 33, 128, 0.753);
+  border-radius: 12px;
+  padding: clamp(24px, 4vw, 40px);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -208,8 +296,17 @@ p {
 /* ======================================================
    COURSEWORK
 ====================================================== */
+#coursework {
+  min-height: 100vh;
+  background: rgba(31, 5, 51, 0.753);
+  border-radius: 12px;
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+}
+
 .course-list {
-  min-height: 100vh;      /* forces it to take the full viewport height */
+  min-height: 100px;
   list-style: none;
   font-size: 1.05rem;
   margin-top: 16px;
@@ -226,7 +323,7 @@ p {
   position: fixed;
   width: 6px;
   height: 6px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 1);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;

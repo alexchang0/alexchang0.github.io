@@ -1,4 +1,18 @@
-<link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Chang</title>
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
   <!-- NAV (optional but recommended) -->
   <nav>
@@ -12,20 +26,32 @@
   <!-- MAIN COVER -->
   <section id="home" class="section full">
     <div class="overlay">
-      <h1>Alex Chang</h1>
+      <h1 class = "site-name">Alex Chang</h1>
     </div>
-    <!-- replace with your photo -->
-    <img src="images/casualHeadshot.jpg" alt="Cover Photo" class="bg-img">
+    <!--  photo -->
+    <img src="images/shorterHeadshot.png" alt="Cover Photo" class="bg-img">
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
     <h2>About Me</h2>
       <p>
-        Hi! I’m a junior studying computer science, data science, and cognition at UC Berkeley. I am interested in all of the connections between humans and technology, specifically SWE, product management, and AI/ML. In my free time I love playing cello, basketball, and cooking.
+        Hi! I’m a junior studying computer science, data science, and cognition at UC Berkeley. 
+        I am interested in all of the connections between humans and technology, specifically SWE,
+        product management, and AI/ML.
+      </p>
+      <p>
+        In my free time I love playing cello, basketball, and cooking. On campus you might catch me playing
+        concerts for the UC Berkeley Symphony, shooting around at the RSF, or eating at every restaurant. 
       </p>
       <p>
         Feel free to reach out at alexchang0@berkeley.edu !
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/alexchang0/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+          LinkedIn
+        </a>
       </p>
   </section>
 
@@ -35,54 +61,63 @@
 
     <div class="timeline">
       <div class="timeline-item">
+        <img src="images/google.png" alt="Google Logo" class="company-logo">
         <span class="date">Incoming Summer 2026</span>
         <h3>Software Engineer Intern - Google</h3>
-        <p>Google Research Global Networking team</p>
+        <p>Google Research Global Networking team.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/nextera.png" alt="NextEra Energy Logo" class="company-logo">
         <span class="date">September 2025 - December 2025</span>
         <h3>Software Engineer - NextEra Energy</h3>
         <p>Web scraper + RAG pipeline for automated energy policy updates.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/amazon.png" alt="Amazon Logo" class="company-logo">
         <span class="date">June 2025 - Auguest 2025</span>
         <h3>Software Development Engineer Intern - Amazon</h3>
         <p>RAG for managing internal AWS account security.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/totalenergies.png" alt="TotalEnergies Logo" class="company-logo">
         <span class="date">January 2025 - May 2025</span>
         <h3>Machine Learning Project Manager - TotalEnergies</h3>
-        <p>Built machine learning models for short-term price forecasting in energy markets.</p>
+        <p>Short-term price forecasting in energy markets.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/amd.png" alt="AMD Logo" class="company-logo">
         <span class="date">August 2024 - December 2024</span>
         <h3>Software Engineer - AMD</h3>
         <p>Full-stack product compliance dashboard for the Anti-Diversion team.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/csm.jpg" alt="CSM Logo" class="company-logo">
         <span class="date">August 2024 - May 2025</span>
         <h3>CS61B Mentor (Data Structures)</h3>
-        <p>Managed and taught weekly sections covering Data Structures and Algorithms from CS61B.</p>
+        <p>Taught weekly sections on Data Structures and Algorithms from CS61B.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/oracle.png" alt="Oracle Logo" class="company-logo">
         <span class="date">February 2024 - May 2024</span>
         <h3>Technology Consultant - Oracle</h3>
-        <p>Analyzed data from expert developers to enhance Oracle's visibility and user journey.</p>
+        <p>Improving Oracle's visibility and user journey.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/ucdavis.png" alt="UC Davis Lab Logo" class="company-logo">
         <span class="date">June 2022 - May 2023</span>
         <h3>Data Analyst Research Intern - UC Davis Rosenquist Lab</h3>
-        <p>Discovered three high-probability sulfated tyrosines in voltage-gated sodium channels related to neurological diseases.</p>
+        <p>Tyrosine sulfation in voltage-gated sodium channels.</p>
       </div>
 
       <div class="timeline-item">
+        <img src="images/dsoma.png" alt="DSOMA Logo" class="company-logo">
         <span class="date">September 2019 - May 2023</span>
         <h3>Cello Tutor</h3>
         <p>Tutored cello students through the Suzuki book method every week.</p>
@@ -92,7 +127,7 @@
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
-    <h2>Projects 💻</h2>
+    <h2>Projects</h2>
 
     <div class="project-grid">
       <div class="project-card">
@@ -179,27 +214,38 @@
 
   <!-- COURSEWORK -->
   <section id="coursework" class="section">
-    <h2>Coursework 📚</h2>
+    <h2>Coursework</h2>
+
+    <h3 class="course-subheader">Computer Science</h3>
     <ul class="course-list">
       <li>CS61A: Structure and Interpretation of Computer Programs</li>
       <li>CS61B: Data Structures</li>
-      <li>CS61C: Computer Architecture/Machine Structures</li>
+      <li>CS61C: Computer Architecture / Machine Structures</li>
       <li>CS70: Discrete Mathematics and Probability Theory</li>
       <li>CS170: Efficient Algorithms and Intractable Problems</li>
       <li>CS188: Artificial Intelligence</li>
-      <li>CS189: Machine learning </li>
+      <li>CS189: Machine Learning</li>
+    </ul>
 
+    <h3 class="course-subheader">Data Science</h3>
+    <ul class="course-list">
       <li>Data 8: Foundations of Data Science</li>
       <li>Data 100: Principles and Techniques of Data Science</li>
       <li>Data 101: Data Engineering</li>
       <li>Data 140: Probability for Data Science</li>
       <li>Data 144: Data Mining</li>
+      <li>Math 54: Linear Algebra and Differential Equations</li>
+    </ul>
 
-      <li>Math54: Linear Algebra and Differential Equations</li>
-      <li>MCELLBIW61: Brain, Mind, and Behavior</li>
-      <li>CogSci1B: Introduction to Cognitive Science</li>
-      <li>CogSciC131: Computational Models of Cognition</li>
-      <li>CogSci132: Rhythms of the Brain</li>
+    <h3 class="course-subheader">Cognition</h3>
+    <ul class="course-list">
+      <li>MCELLBI W61: Brain, Mind, and Behavior</li>
+      <li>CogSci 1B: Introduction to Cognitive Science</li>
+      <li>CogSci C131: Computational Models of Cognition</li>
+      <li>CogSci 132: Rhythms of the Brain</li>
     </ul>
   </section>
   <script src="script.js"></script>
+  <!-- close body/html for valid structure -->
+</body>
+</html>
