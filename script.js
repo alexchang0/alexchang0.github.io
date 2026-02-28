@@ -1,34 +1,45 @@
-const toggleBtn = document.getElementById('toggleBtn');
-const body = document.body;
+/* ========== NAV ACTIVE LINK ON SCROLL ========== */
 
-// Check if a theme is saved in localStorage, else set to light theme by default
-if (localStorage.getItem('theme') === 'dark') {
-    body.setAttribute('data-theme', 'dark');
-}
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
-// Toggle theme on button click
-toggleBtn.addEventListener('click', () => {
-    if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');  // Remove dark theme
-        localStorage.setItem('theme', 'light');  // Save theme in localStorage
-    } else {
-        body.setAttribute('data-theme', 'dark');  // Apply dark theme
-        localStorage.setItem('theme', 'dark');  // Save theme in localStorage
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) {
+      current = section.id;
     }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${current}`
+    );
+  });
 });
 
-// Create a sparkle effect when the mouse moves
-document.addEventListener('mousemove', (e) => {
-    const sparkle = document.createElement('div');
-    sparkle.classList.add('sparkle');
-    document.body.appendChild(sparkle);
+/* ========== SPARKLE CURSOR EFFECT ========== */
 
-    // Position the sparkle based on the mouse's position
-    sparkle.style.left = `${e.pageX - 3}px`; // Center the sparkle on the cursor
-    sparkle.style.top = `${e.pageY - 3}px`;
+let lastSparkleTime = 0;
+const SPARKLE_DELAY = 20; // ms (throttle for performance)
 
-    // Remove the sparkle after animation ends
-    setTimeout(() => {
-        sparkle.remove();
-    }, 1500); // Matches the animation duration
+document.addEventListener("mousemove", (e) => {
+  const now = Date.now();
+  if (now - lastSparkleTime < SPARKLE_DELAY) return;
+  lastSparkleTime = now;
+
+  const sparkle = document.createElement("div");
+  sparkle.className = "sparkle";
+
+  sparkle.style.left = `${e.clientX}px`;
+  sparkle.style.top = `${e.clientY}px`;
+
+  document.body.appendChild(sparkle);
+
+  setTimeout(() => {
+    sparkle.remove();
+  }, 1200);
 });

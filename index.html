@@ -1,108 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chang</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1><span class="highlight">Alex Chang</span></h1>
-        </header>
+<link rel="stylesheet" href="style.css" />
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! My name is Alex and I'm studying computer science, data science, and cognition at UC Berkeley. I am interested in all of the connections between technology, humans, and neuroscience, specifically SWE and product management.</p>
-                <div class="contact-links">
-    <a href="https://www.linkedin.com/in/alexchang0" class="btn" target="_blank">LinkedIn</a>
-    <a href="mailto:alexchang0@berkeley.edu" class="btn">Email Me</a>
-</div>
+  <!-- NAV (optional but recommended) -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#coursework">Coursework</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
 
-        </section>
-
-        <section id="resume">
-            <h2>🎓 Education</h2>
-            <div class="resume-category">
-                <div class="education-title">
-                    <span>University of California, Berkeley</span>
-                    <span>Graduating May 2027</span>
-                </div>
-                <p class="education-details">Bachelor's in Data Science and Cognition, Minor in Computer Science</p>
-            </div>
-
-            <h2>💼 Experience</h2>
-            <div class="resume-category">
-                <div class="resume-item">
-                    <h4><span>Software Engineer (Contract) - NextEra Energy</span> <span>September 2025 - Present</span></h4>
-                    <p>Building a web scraper and RAG pipeline for automated energy policy updates.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>Software Development Engineer Intern - Amazon</span> <span>June 2025 - August 2025</span></h4>
-                    <p>Built a RAG powered chatbot to help manage internal AWS account security.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>Machine Learning Project Manager (Contract) - TotalEnergies</span> <span>Jan 2025 - May 2025</span></h4>
-                    <p>Built machine learning models for short-term price forecasting in energy markets.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>Software Engineer (Contract) - AMD</span> <span>Aug 2024 - Jan 2025</span></h4>
-                    <p>Full-stack product compliance dashboard for the Anti-Diversion team.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>CS61B Mentor</span> <span>Aug 2024 - May 2025</span></h4>
-                    <p>Managed and taught weekly sections covering Data Structures and Algorithms from CS61B.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>Technology Consultant - Oracle</span>
-                    <span>February 2024 - May 2024</span></h4>
-                    <p>Analyzed data from expert developers to enhance Oracle's visibility and user journey.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>Data Analyst Research Intern - UC Davis Rosenquist Lab</span>
-                    <span>June 2022 - May 2023</span></h4>
-                    <p>Discovered three high-probability sulfated tyrosines in voltage-gated sodium channels related to neurological diseases.</p>
-                </div>
-                <div class="resume-item">
-                    <h4><span>Cello Tutor - DSOMA Strings Tutoring Program</span>
-                    <span>September 2019 - May 2023</span></h4>
-                    <p>Weekly tutored two cello students through the Suzuki book method.</p>
-                </div>
-            </div>
-
-            <h2>💡 Projects</h2>
-            <div class="resume-category">
-                <div class="resume-item">
-                    <h4>Computer Science Mentors Website (Waitlist Feature)</h4>
-                    <p>Designing and implementing a waitlist system for the CSM website used by 1,000+ students.</p>
-                </div>
-                <div class="resume-item">
-                    <h4>Email Spam Detector</h4>
-                    <p>Designed and developed a logistic regression model in Python to classify emails as spam or legitimate.</p>
-                </div>
-                <div class="resume-item">
-                    <h4>Multi-Circle Trochoid Animation</h4>
-                    <p>Developed an animation tool using HTML and JavaScript that draws curves traced by rolling circles.</p>
-                </div>
-                <div class="resume-item">
-                    <h4>alexchang0.github.io</h4>
-                    <p>Built this website using CSS, HTML, and JavaScript.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="Art">
-            <h2>🎵 My Art/Music 🎨</h2>
-            <p>Check out my music on YouTube!</p>
-            <a href="https://www.youtube.com/channel/UCpJPER-qhBAfGf3TCGccTrg" class="btn" target="_blank">Visit My YouTube Channel</a>
-        </section>
+  <!-- MAIN COVER -->
+  <section id="home" class="section full">
+    <div class="overlay">
+      <h1>Alex Chang</h1>
     </div>
-</body>
+    <!-- replace with your photo -->
+    <img src="images/casualHeadshot.jpg" alt="Cover Photo" class="bg-img">
+  </section>
 
-<button id="toggleBtn">Theme Toggle</button>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+      <p>
+        Hi! I’m a junior studying computer science, data science, and cognition at UC Berkeley. I am interested in all of the connections between humans and technology, specifically SWE, product management, and AI/ML. In my free time I love playing cello, basketball, and cooking.
+      </p>
+      <p>
+        Feel free to reach out at alexchang0@berkeley.edu !
+      </p>
+  </section>
 
-</html>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2>Professional Experience</h2>
 
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="date">Incoming Summer 2026</span>
+        <h3>Software Engineer Intern - Google</h3>
+        <p>Google Research Global Networking team</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">September 2025 - December 2025</span>
+        <h3>Software Engineer - NextEra Energy</h3>
+        <p>Web scraper + RAG pipeline for automated energy policy updates.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">June 2025 - Auguest 2025</span>
+        <h3>Software Development Engineer Intern - Amazon</h3>
+        <p>RAG for managing internal AWS account security.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">January 2025 - May 2025</span>
+        <h3>Machine Learning Project Manager - TotalEnergies</h3>
+        <p>Built machine learning models for short-term price forecasting in energy markets.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">August 2024 - December 2024</span>
+        <h3>Software ENgineer - AMD</h3>
+        <p>Full-stack product compliance dashboard for the Anti-Diversion team.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">August 2024 - May 2025</span>
+        <h3>CS61B Mentor (Data Structures)</h3>
+        <p>Managed and taught weekly sections covering Data Structures and Algorithms from CS61B.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">February 2024 - May 2024</span>
+        <h3>Technology Consultant - Oracle</h3>
+        <p>Analyzed data from expert developers to enhance Oracle's visibility and user journey.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">June 2022 - May 2023</span>
+        <h3>Data Analyst Research Intern - UC Davis Rosenquist Lab</h3>
+        <p>Discovered three high-probability sulfated tyrosines in voltage-gated sodium channels related to neurological diseases.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">September 2019 - May 2023</span>
+        <h3>Cello Tutor</h3>
+        <p>Tutored cello students through the Suzuki book method every week.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects 💻</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Project 1">
+        <div class="project-overlay">
+          <h3>Dynamic Pricing Model</h3>
+          <p>Build dynamic pricing models for an online UK retail store</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>CSM Website Waitlist Feature</h3>
+          <p>Helped implement a waitlist system for the CSM website</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Email Spam Detector</h3>
+          <p>Trained a logisitc regression model to label emails as legitimate or spam</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Logism CPU</h3>
+          <p>Built a functional CPU using Logisim</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Snake</h3>
+          <p>Implemented a terminal based version of the popular snake game</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Beach Maze</h3>
+          <p>2D tile world exploration game</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Multi-Circle Trochoid Animation</h3>
+          <p>Animation tool that traces curves by following circles rolling around each other</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>2048</h3>
+          <p>Implemented the logic behind the game 2048</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Scheme Interpreter</h3>
+          <p>Built a Scheme interpreter in Python</p>
+        </div>
+      </div>
+
+            <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>alexchang0</h3>
+          <p>Built this website using JS, HTML, and CSS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSEWORK -->
+  <section id="coursework" class="section">
+    <h2>Coursework 📚</h2>
+    <ul class="course-list">
+      <li>CS61A: Structure and Interpretation of Computer Programs</li>
+      <li>CS61B: Data Structures</li>
+      <li>CS61C: Computer Architecture/Machine Structures</li>
+      <li>CS70: Discrete Mathematics and Probability Theory</li>
+      <li>CS170: Efficient Algorithms and Intractable Problems</li>
+      <li>CS188: Artificial Intelligence</li>
+      <li>CS189: Machine learning </li>
+
+      <li>Data 8: Foundations of Data Science</li>
+      <li>Data 100: Principles and Techniques of Data Science</li>
+      <li>Data 101: Data Engineering</li>
+      <li>Data 140: Probability for Data Science</li>
+      <li>Data 144: Data Mining</li>
+
+      <li>Math54: Linear Algebra and Differential Equations</li>
+      <li>MCELLBIW61: Brain, Mind, and Behavior</li>
+      <li>CogSci1B: Introduction to Cognitive Science</li>
+      <li>CogSciC131: Computational Models of Cognition</li>
+      <li>CogSci132: Rhythms of the Brain</li>
+    </ul>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="section">
+    <h2>Hobbies 🎶🏀🍜</h2>
+
+    <div class="hobby-grid">
+      <img src="images/cello.jpg" alt="Cello">
+      <img src="images/basketball.jpg" alt="Basketball">
+      <img src="images/cooking.jpg" alt="Cooking">
+    </div>
+  </section>
+
+  <script src="script.js"></script>

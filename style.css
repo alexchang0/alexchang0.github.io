@@ -1,239 +1,182 @@
-/* Define default light theme variables */
-:root {
-    --primary-color: #5a8bb1;
-    --secondary-color: #d2b68a;
-    --accent-color: #86c39e;
-    --highlight-color: #a3c8f3;
-    --background-color: #e8d8b7;
-    --about-background-color: #f2e4b5;
+/* ========== BASE RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Dark theme variables */
-[data-theme="dark"] {
-    --primary-color: #00caeb;
-    --secondary-color: #34495e;
-    --accent-color: #df3f8b;
-    --highlight-color: #2528a2;
-    --background-color: #000000;
-    --about-background-color: #34495e;
-
+html {
+  scroll-behavior: smooth;
 }
 
-/* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color); /* Background color based on theme */
-    color: #ecf0f1; /* Light gray text */
-    margin: 0;
-    padding: 0;
-    cursor: url('totoroCursor.cur') 16 16, auto;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color, #0f172a);
+  color: #ecf0f1;
 }
 
-/* Update text color for all descriptions to light blue */
-p, .resume-item p, .education-details, .contact-links .btn {
-    color: #a3c8f3; /* Light blue text */
+/* ========== NAV ========== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
 }
 
-/* About Section */
-#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Ensure text is centered */
-    margin: 20px auto; /* Centers horizontally */
-    padding: 20px;
-    border-radius: 15px;
-    background-color: var(--about-background-color); /* Light or dark background */
-    width: 60%; /* Adjust width to avoid being too wide */
+nav a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: 500;
 }
 
-/* Ensure title is centered */
-#about h2 {
-    margin-bottom: 10px;
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #ecf0f1;
 }
 
-/* Container */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+/* ========== SECTIONS ========== */
+.section {
+  min-height: 100vh;
+  padding: 100px 10%;
+}
+
+.full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 h1 {
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: var(--primary-color); /* Text color based on theme */
-    border: 3px solid var(--primary-color); /* Border based on theme */
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto; /* Centers horizontally */
-    border-radius: 10px;
-    /* Removed glow effect */
+  font-size: 3rem;
 }
 
-/* Subheadings (Education, Experience, Projects, etc.) */
 h2 {
-    color: var(--accent-color); /* Accent color for subheadings */
-    border-bottom: 2px solid var(--accent-color); /* Border color based on theme */
-    padding-bottom: 5px;
-    margin-top: 30px;
-    /* Removed glow effect */
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-/* Resume Categories */
-.resume-category {
-    background: var(--secondary-color); /* Background based on theme */
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid var(-background-color); /* Border based on theme */
-    margin-bottom: 30px;
+/* ========== COVER IMAGE ========== */
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Resume Items */
-.resume-item {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--highlight-color); /* Border based on theme */
-    background: var(--background-color); /* Background based on theme */
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  text-align: center;
 }
 
-.resume-item h4 {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: var(--primary-color); /* Highlight color for resume items */
-    margin: 0;
-    /* Removed glow effect */
+/* ========== EXPERIENCE TIMELINE ========== */
+.timeline {
+  border-left: 2px solid #475569;
+  padding-left: 30px;
 }
 
-.resume-item p {
-    margin: 5px 0 0;
-    font-size: 0.9em;
-    color: var(--primary-color); /* Light blue text */
+.timeline-item {
+  margin-bottom: 40px;
 }
 
-/* Education */
-.education-title {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: var(--primary-color); /* Primary color for education title */
+.date {
+  font-size: 0.9rem;
+  color: #94a3b8;
 }
 
-.education-details {
-    font-size: 0.9em;
-    color: var(--primary-color); /* Light blue text */
+/* ========== PROJECTS ========== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 10px;
-    color: var(--primary-color); /* Primary color for button text */
-    border: 1px solid var(--primary-color); /* Primary color for button border */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, box-shadow 0.3s;
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.btn:hover {
-    background: var(--primary-color); /* Button hover background color */
-    color: #ffffff; /* Button text color on hover */
-    /* Reduced glow effect on hover */
-    box-shadow: 0 2px 4px rgba(0, 202, 235, 0.3);
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-    .resume-item h4 {
-        flex-direction: column;
-    }
-
-    body {
-        cursor: auto; /* Enable default cursor on mobile */
-    }
-
-    .sparkle {
-        display: none; /* Hide sparkles on mobile */
-    }
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Sparkle effect (neon cyan) */
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* ========== COURSEWORK ========== */
+.course-list {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.course-list li {
+  margin-bottom: 10px;
+}
+
+/* ========== HOBBIES ========== */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.hobby-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ========== SPARKLE CURSOR EFFECT ========== */
 .sparkle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: var(--primary-color); /* Neon color based on theme */
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0px 0px 2px var(--primary-color); /* Smaller glow */
-    animation: fadeOut 1.5s ease-out forwards;
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: sparkle-fade 1.2s ease-out forwards;
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(2);
-    }
+@keyframes sparkle-fade {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
 
-/* Contact Links */
-.contact-links {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.contact-links .btn {
-    padding: 8px 12px;
-    font-size: 0.9em;
-    background: transparent;
-    border: 1px solid var(--primary-color); /* Border based on theme */
-    color: var(--primary-color);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.contact-links .btn:hover {
-    background: var(--primary-color);
-    color: #ffffff;
-}
-
-#toggleBtn {
-    position: fixed;
-    bottom: 20px; /* Position at the bottom */
-    right: 20px; /* Position towards the right */
-    padding: 8px 16px; /* Reduced padding */
-    background-color: var(--primary-color); /* Background color based on theme */
-    color: #ffffff; /* White text color */
-    font-size: 0.9em; /* Slightly smaller font size */
-    border: 2px solid var(--primary-color); /* Border color based on theme */
-    border-radius: 8px; /* Slightly smaller border radius */
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-#toggleBtn:hover {
-    background-color: var(--accent-color); /* Accent color on hover */
-    color: var(--primary-color); /* Change text color on hover */
-    box-shadow: 0 4px 10px rgba(0, 202, 235, 0.3); /* Neon glow effect */
-}
-
-#toggleBtn:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 2px var(--accent-color); /* Accent color outline when focused */
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .sparkle {
+    animation: none;
+  }
 }
