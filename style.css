@@ -93,7 +93,7 @@ nav a.active {
 
 .site-name {
   display: inline-block;               /* shrink to text width */
-  font-size: clamp(7rem, 6vw, 9rem);
+  font-size: clamp(2.1rem, 6vw, 7rem);
   font-weight: 100;
   letter-spacing: 0.08em;
   
